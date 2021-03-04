@@ -16,10 +16,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Tolerate;
 
-@Builder
+@Builder(toBuilder = true)
 @Getter
 @Setter
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "pessoa")
 public class Pessoa implements Serializable {
